@@ -5,7 +5,7 @@
 
 const country = "The US";
 const continent = "North America";
-let population = "333,680,703";
+let population = 333680703;
 console.log(country);
 console.log(continent);
 console.log(population);
@@ -37,3 +37,39 @@ Then, change these variables to const.
 language = "English";
 isIsland = true;
 console.log(isIsland);
+
+/*
+1.If your country split in half,and each half would 
+contain half the population, then how many people would live in each half?.
+2. Increase the population of your country by 1 and log the result to the console.
+3. Finland has a population of 6 million. Does your country have more people than 
+Finland?
+4. The average population of a country is 33 million people. 
+Does your country have less people than the average country?
+5. Based on the variables you created,create a new variable'description'
+which contains a string with this format: 'Portugal is in Europe, and its 
+11 million people speak portuguese'
+*/
+let myCountry = population / 2;
+myCountry++;
+const hisCountry = 6000000;
+const otherCountrys = 33000000;
+const description =
+  country +
+  " " +
+  "is in" +
+  " " +
+  continent +
+  " " +
+  "its" +
+  " " +
+  population +
+  " " +
+  "million people speak" +
+  " " +
+  language;
+
+console.log(myCountry);
+console.log(myCountry > hisCountry);
+console.log(myCountry < otherCountrys);
+console.log(description);

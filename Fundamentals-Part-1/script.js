@@ -41,11 +41,11 @@ not a true or false.
 javascriptIsFun = "yes";
 console.log(typeof javascriptIsFun); //string
 
+let, const, var 
 let year;
 console.log(typeof year); //undfined
 year = 1998;
 console.log(typeof year); // number
-*/
 // let,const,var
 //let: is use for when the value is going to change.
 let age = 30;
@@ -58,3 +58,36 @@ const birthYear = 1991;
 //var:is the old way just the same as let.
 var job = "programmer";
 job = "student";
+*/
+
+//// Basic Operator
+//math Operator
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageSarah / 10, 2 ** 3);
+// 2 ** 3: means 2 to the power of 3 = 2 * 2 * 2;
+// ** = power of
+
+const firstName = "Jonas";
+const lastName = "something";
+console.log(firstName + " " + lastName);
+
+// assignment operator
+let x = 5 + 10; //x = 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // adding 1
+x--; // subtracting 1
+x--; // subtracting 1
+console.log(x);
+
+// comperison operator
+// >, <, >=, <=
+console.log(ageJonas > ageSarah);
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+console.log(now - 1991 > now - 2018);
