@@ -23,7 +23,6 @@ let myCurrentJob = "programmer";
 // then this
 let job1 = "walmart";
 let job2 = "programmer";
-*/
 
 //data types
 let javascriptIsFun = true;
@@ -34,11 +33,11 @@ console.log(typeof javascriptIsFun); //is a boolean
 console.log(typeof 32); // is  a number
 console.log(typeof "hi"); //is a string
 
-/*
+///////////////////
 javaceiptIsFUn was a boolean but now it a 
 string because we declare a 'string' and 
 not a true or false.
-*/
+///////////////////
 javascriptIsFun = "yes";
 console.log(typeof javascriptIsFun); //string
 
@@ -46,3 +45,16 @@ let year;
 console.log(typeof year); //undfined
 year = 1998;
 console.log(typeof year); // number
+*/
+// let,const,var
+//let: is use for when the value is going to change.
+let age = 30;
+age = 32;
+//const: the values cannot be change using a const.
+const birthYear = 1991;
+// birthYear = 1990; //will be a typeError
+//const must have a value, cannot be empty
+// const job;
+//var:is the old way just the same as let.
+var job = "programmer";
+job = "student";

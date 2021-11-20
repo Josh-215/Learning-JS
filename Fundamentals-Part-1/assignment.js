@@ -3,11 +3,11 @@
 2. Log their values to the console 
 */
 
-let country = "The US";
-console.log(country);
-let continent = "North America";
-console.log(continent);
+const country = "The US";
+const continent = "North America";
 let population = "333,680,703";
+console.log(country);
+console.log(continent);
 console.log(population);
 
 /*
@@ -22,5 +22,18 @@ let isIsland = false;
 let language;
 console.log(typeof isIsland);
 console.log(typeof country);
-console.log(typeof continent);
+console.log(typeof language);
 console.log(typeof population);
+
+/*
+1.Set the value of'language'to the language spoken where you live
+(some countries have multiple languages, but just choose one)
+2.Think about which variables should be const variables 
+(which values will never change, and which might change?). 
+Then, change these variables to const.
+3.Try to change one of the changed variables now,and observe what happens
+*/
+
+language = "English";
+isIsland = true;
+console.log(isIsland);
