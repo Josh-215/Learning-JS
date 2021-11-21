@@ -54,20 +54,7 @@ let myCountry = population / 2;
 myCountry++;
 const hisCountry = 6000000;
 const otherCountrys = 33000000;
-const description =
-  country +
-  " " +
-  "is in" +
-  " " +
-  continent +
-  " " +
-  "its" +
-  " " +
-  population +
-  " " +
-  "million people speak" +
-  " " +
-  language;
+const description = `${country} is in ${continent} its ${population} speak ${language} `;
 
 console.log(myCountry);
 console.log(myCountry > hisCountry);
