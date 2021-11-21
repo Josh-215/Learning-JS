@@ -90,7 +90,6 @@ console.log(ageSarah >= 18);
 
 const isFullAge = ageSarah >= 18;
 console.log(now - 1991 > now - 2018);
-*/
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -102,3 +101,39 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2; //
 console.log(averageAge, ageJonas, ageSarah);
+///Coding Challenge #1
+const marksMass = 78;
+const marksHeigth = 1.69;
+const johnMass = 92;
+const johnHeigth = 1.95;
+
+// const marksMass = 95;
+// const marksHeigth = 1.88;
+// const johnMass = 85;
+// const johnHeigth = 1.76;
+const BMIMark = marksMass / marksHeigth ** 2;
+console.log(BMIMark);
+const BMIJohn = johnMass / johnHeigth ** 2;
+console.log(BMIJohn);
+
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, markHigherBMI);
+*/
+const firstName = "jonas";
+const job = "teacher";
+const birthYear = 1991;
+const year = 2037;
+//the old way
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+// the new way
+const newJonas = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(newJonas);
+
+//The \n make a new string line for JS
+console.log("string with \n multiple \n lines");
+// this is the new way of using multipe string line buy using
+//return and the back (tick===``)
+console.log(`string with
+multipe 
+line`);
