@@ -118,14 +118,13 @@ console.log(BMIJohn);
 
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
-*/
 const firstName = "jonas";
 const job = "teacher";
 const birthYear = 1991;
 const year = 2037;
 //the old way
 const jonas =
-  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+"I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
 // the new way
 const newJonas = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
 console.log(newJonas);
@@ -137,3 +136,22 @@ console.log("string with \n multiple \n lines");
 console.log(`string with
 multipe 
 line`);
+*/
+
+const age = 15;
+
+if (age >= 18) {
+  console.log(`jay can get a driving license now`);
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`try again in a ${yearsLeft} years`);
+}
+
+const birthYear = 2012;
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);

@@ -50,13 +50,18 @@ Does your country have less people than the average country?
 which contains a string with this format: 'Portugal is in Europe, and its 
 11 million people speak portuguese'
 */
-let myCountry = population / 2;
-myCountry++;
-const hisCountry = 6000000;
-const otherCountrys = 33000000;
-const description = `${country} is in ${continent} its ${population} speak ${language} `;
+// let myCountry = population / 2;
+// myCountry++;
+// const hisCountry = 6000000;
+// const otherCountrys = 33000000;
+// const description = `${country} is in ${continent} its ${population} speak ${language} `;
 
-console.log(myCountry);
-console.log(myCountry > hisCountry);
-console.log(myCountry < otherCountrys);
-console.log(description);
+// console.log(myCountry);
+// console.log(myCountry > hisCountry);
+// console.log(myCountry < otherCountrys);
+// console.log(description);
+/*
+If your country's population is greater than 33million, log a string like this to the console:
+'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population
+is 22 million below average' (the 22 is the average of 33 minus the country's population)
+*/
