@@ -118,6 +118,7 @@ console.log(BMIJohn);
 
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
+
 const firstName = "jonas";
 const job = "teacher";
 const birthYear = 1991;
@@ -129,15 +130,15 @@ const jonas =
 const newJonas = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
 console.log(newJonas);
 
-//The \n make a new string line for JS
+//The (\n) make a new string line for JS
 console.log("string with \n multiple \n lines");
+
 // this is the new way of using multipe string line buy using
-//return and the back (tick===``)
+//return and the backtick (tick===``)
 console.log(`string with
 multipe 
 line`);
-*/
-
+/// if/else
 const age = 15;
 
 if (age >= 18) {
@@ -155,3 +156,26 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
+
+/////
+*/
+// const marksMass = 78;
+// const marksHeigth = 1.69;
+// const johnMass = 92;
+// const johnHeigth = 1.95;
+
+const marksMass = 95;
+const marksHeigth = 1.88;
+const johnMass = 85;
+const johnHeigth = 1.76;
+
+const BMIMark = marksMass / marksHeigth ** 2;
+console.log(BMIMark);
+const BMIJohn = johnMass / johnHeigth ** 2;
+console.log(BMIJohn);
+
+if (BMIMark > BMIJohn) {
+  console.log(`Mark BMI ${BMIMark} is Higher than john's BMI ${BMIJohn}`);
+} else {
+  console.log(`John's BMI ${BMIJohn} is Higher than Mark BMI ${BMIMark}`);
+}
