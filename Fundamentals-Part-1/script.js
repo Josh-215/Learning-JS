@@ -178,7 +178,6 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI ${BMIJohn} is Higher than Mark BMI ${BMIMark}`);
 }
-*/
 /////
 ///Type Conversion and Coercion
 //Type Conversion
@@ -195,4 +194,55 @@ console.log(typeof NaN);
 console.log(String(23), 23);
 //Type Coercion
 console.log("I am " + 23 + " years old"); // will be the same as the one bolow
-console.log("I am " + "23 " + "years old");
+console.log("23" - "10" - 3); //10
+console.log("23" + "10" + 3); //23233
+console.log("23" / "2"); //11.5
+
+let n = "1" + 1; //11
+n = n - 1; //10
+console.log(n);
+//////
+///Truthy and Falsy Values
+// 5 Falsy Values: 0, '', undefined, null, NaN
+console.log(Boolean(0)); // false
+console.log(Boolean("")); //false
+console.log(Boolean(undefined)); //false
+console.log(Boolean(NaN)); //false
+
+const money = 0;
+if (money) {
+  console.log(`dont spend it all`);
+} else {
+  console.log(`you should to get a job`);
+}
+
+let heigth = 123;
+if (heigth) {
+  console.log(`height has a value`);
+} else {
+  console.log(`height is undefined`);
+}
+*/
+
+//////
+///Equality Operators: == vs. ===
+const age = 18;
+if (age === 18) console.log(`you just became an adult (stricty)`);
+
+if (age == 18) console.log(`you just became an adult (loose)`);
+
+const favourite = Number(prompt(`what's your favourite number`));
+console.log(favourite);
+
+if (favourite === 23) {
+  console.log(`cool! 23 is an amzaing number`);
+} else if (favourite === 7) {
+  console.log(`7 is cool! too`);
+} else if (favourite === 9) {
+  console.log(`9 is cool! too`);
+} else {
+  console.log(`Number is not 23, 7, or 9`);
+}
+if (favourite !== 23) {
+  console.log(`why not 23? `);
+}
