@@ -158,7 +158,6 @@ if (birthYear <= 2000) {
 console.log(century);
 
 /////
-*/
 // const marksMass = 78;
 // const marksHeigth = 1.69;
 // const johnMass = 92;
@@ -179,3 +178,21 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI ${BMIJohn} is Higher than Mark BMI ${BMIMark}`);
 }
+*/
+/////
+///Type Conversion and Coercion
+//Type Conversion
+//this will not add 1991 + 18 togather like math, why?
+//because inputYear is a siring.
+const inputYear = "1991";
+console.log(inputYear + 18); // 199118
+//but using a function like this will do
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("jane"));
+console.log(typeof NaN);
+console.log(String(23), 23);
+//Type Coercion
+console.log("I am " + 23 + " years old"); // will be the same as the one bolow
+console.log("I am " + "23 " + "years old");
