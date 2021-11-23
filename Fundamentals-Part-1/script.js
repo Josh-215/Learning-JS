@@ -288,46 +288,71 @@ const shouldDrive = hasDriversLicense && hasGoodVision;
             `The Koalas Wins The Trophy! with a score of ` + Math.floor(Koalas)
             );
           }
-          */
-
-///////
-///The switch Statement
-const day = `Wednesday`;
-
-switch (day) {
+          
+  ///////
+  ///The switch Statement
+  const day = `Wednesday`;
+      
+  switch (day) {
   case "Monday":
-    console.log(`Plan course structure`);
-    console.log(`Go to coding meetup`);
-    break;
-  case "Tuesday":
-    console.log(`Go get some food for the house`);
-    break;
-  case "Wednesday":
-  case "Thrusday":
-    console.log(`Do coding test`);
-    break;
-  case "Friday":
-    console.log(`Record some videos`);
-    break;
-  case "Saturday":
-  case "Sunday":
-    console.log(`Enjoye my weekend`);
-    break;
-  default:
-    console.log(`Not a valid day`);
-}
-
-if (day === "Monday") {
   console.log(`Plan course structure`);
   console.log(`Go to coding meetup`);
-} else if (day === "Tuesday") {
+  break;
+  case "Tuesday":
   console.log(`Go get some food for the house`);
-} else if (day === "Wednesday" || "Thrusday") {
+  break;
+  case "Wednesday":
+  case "Thrusday":
   console.log(`Do coding test`);
-} else if (day === "Friday") {
+  break;
+  case "Friday":
   console.log(`Record some videos`);
-} else if ("Saturday" || "Sunday") {
-  console.log(`Enjoye my weekend`);
-} else {
-  console.log(`Not a valid day`);
-}
+  break;
+  case "Saturday":
+  case "Sunday":
+ console.log(`Enjoye my weekend`);
+ break;
+  default:
+     console.log(`Not a valid day`);
+   }
+   
+   if (day === "Monday") {
+     console.log(`Plan course structure`);
+     console.log(`Go to coding meetup`);
+   } else if (day === "Tuesday") {
+     console.log(`Go get some food for the house`);
+   } else if (day === "Wednesday" || "Thrusday") {
+     console.log(`Do coding test`);
+   } else if (day === "Friday") {
+     console.log(`Record some videos`);
+   } else if ("Saturday" || "Sunday") {
+     console.log(`Enjoye my weekend`);
+   } else {
+     console.log(`Not a valid day`);
+   }                
+   ///////
+   ///The Conditional (Ternary) Operator
+   const age = 23;
+   // age >= 18;
+   // ? console.log(`i like to have a wine pls`)
+   // : console.log(`water for me pls`);
+   
+   const drink = age >= 23 ? `i like to have a wine pls` : `water for me pls`;
+   console.log(drink);
+   
+   let drink2;
+   if (age >= 23) {
+     drink2 = "wine";
+    } else {
+      drink2 = "water";
+    }
+    console.log(drink2);
+    
+    console.log(`I like to drink ${age >= 18 ? "water" : "wine"}`);
+    */
+
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, the total value ${bill + tip}`
+);
