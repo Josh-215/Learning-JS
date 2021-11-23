@@ -269,23 +269,65 @@ const shouldDrive = hasDriversLicense && hasGoodVision;
     } else {
       console.log(`someone else should drive...`);
     }
-    */
+    
+    ////////
+    ///Coding Challenge #3
+    const Dolphins = (9 + 108 + 89) / 3; //68
+    const Koalas = (88 + 91 + 110) / 3; //96
+    
+    if (Dolphins === Koalas) {
+      console.log(
+        `There is a Tie with a scores of ${Dolphins} and ${Koalas} Both win the trophy!'`
+        );
+      } else if (Dolphins > Koalas) {
+        console.log(
+          `The Dolphins Wins The Trophy! with a score of ` + Math.floor(Dolphins)
+          );
+        } else {
+          console.log(
+            `The Koalas Wins The Trophy! with a score of ` + Math.floor(Koalas)
+            );
+          }
+          */
 
-////////
-///Coding Challenge #3
-const Dolphins = (9 + 108 + 89) / 3; //68
-const Koalas = (88 + 91 + 110) / 3; //96
+///////
+///The switch Statement
+const day = `Wednesday`;
 
-if (Dolphins === Koalas) {
-  console.log(
-    `There is a Tie with a scores of ${Dolphins} and ${Koalas} Both win the trophy!'`
-  );
-} else if (Dolphins > Koalas) {
-  console.log(
-    `The Dolphins Wins The Trophy! with a score of ` + Math.floor(Dolphins)
-  );
+switch (day) {
+  case "Monday":
+    console.log(`Plan course structure`);
+    console.log(`Go to coding meetup`);
+    break;
+  case "Tuesday":
+    console.log(`Go get some food for the house`);
+    break;
+  case "Wednesday":
+  case "Thrusday":
+    console.log(`Do coding test`);
+    break;
+  case "Friday":
+    console.log(`Record some videos`);
+    break;
+  case "Saturday":
+  case "Sunday":
+    console.log(`Enjoye my weekend`);
+    break;
+  default:
+    console.log(`Not a valid day`);
+}
+
+if (day === "Monday") {
+  console.log(`Plan course structure`);
+  console.log(`Go to coding meetup`);
+} else if (day === "Tuesday") {
+  console.log(`Go get some food for the house`);
+} else if (day === "Wednesday" || "Thrusday") {
+  console.log(`Do coding test`);
+} else if (day === "Friday") {
+  console.log(`Record some videos`);
+} else if ("Saturday" || "Sunday") {
+  console.log(`Enjoye my weekend`);
 } else {
-  console.log(
-    `The Koalas Wins The Trophy! with a score of ` + Math.floor(Koalas)
-  );
+  console.log(`Not a valid day`);
 }
