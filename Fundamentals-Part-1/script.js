@@ -245,7 +245,6 @@ if (favourite === 23) {
 if (favourite !== 23) {
   console.log(`why not 23? `);
 }
-*/
 
 //////
 ///Logical Operators
@@ -257,16 +256,36 @@ console.log(!hasDriversLicense); // false
 
 const shouldDrive = hasDriversLicense && hasGoodVision;
 // if (shouldDrive) {
-//   console.log(`jay is able to Drive!`);
-// } else {
-//   console.log(`someone else should drive...`);
-// }
+  //   console.log(`jay is able to Drive!`);
+  // } else {
+    //   console.log(`someone else should drive...`);
+    // }
+    
+    const isTired = false; //C
+    console.log(hasDriversLicense || hasGoodVision || isTired);
+    
+    if (hasDriversLicense && hasGoodVision && !isTired) {
+      console.log(`jay is able to Drive!`);
+    } else {
+      console.log(`someone else should drive...`);
+    }
+    */
 
-const isTired = false; //C
-console.log(hasDriversLicense || hasGoodVision || isTired);
+////////
+///Coding Challenge #3
+const Dolphins = (9 + 108 + 89) / 3; //68
+const Koalas = (88 + 91 + 110) / 3; //96
 
-if (hasDriversLicense && hasGoodVision && !isTired) {
-  console.log(`jay is able to Drive!`);
+if (Dolphins === Koalas) {
+  console.log(
+    `There is a Tie with a scores of ${Dolphins} and ${Koalas} Both win the trophy!'`
+  );
+} else if (Dolphins > Koalas) {
+  console.log(
+    `The Dolphins Wins The Trophy! with a score of ` + Math.floor(Dolphins)
+  );
 } else {
-  console.log(`someone else should drive...`);
+  console.log(
+    `The Koalas Wins The Trophy! with a score of ` + Math.floor(Koalas)
+  );
 }
