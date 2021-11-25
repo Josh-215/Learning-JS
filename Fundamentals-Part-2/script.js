@@ -1,4 +1,5 @@
 "use strict";
+/*
 ///Functions
 function logger() {
   console.log("my name is jay");
@@ -18,3 +19,23 @@ console.log(applejuices);
 
 const num = Number("23");
 ///////
+*/
+////Function Declarations vs. Expressions
+//this a Function Declarations
+//we can call a Declarations before evan defining them
+// This is optional
+const age1 = calcAge1(1991); //being called first
+
+function calcAge1(birthYear) {
+  // now defind
+  return 2037 - birthYear;
+}
+console.log(age1);
+////
+//Function Expressions
+// cant be called first need to be diefind than called
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(1991);
+console.log(age1, age2);
