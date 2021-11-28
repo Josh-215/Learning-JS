@@ -86,7 +86,6 @@ const yearsOfRetirement = function (birthyear, firstName) {
 };
 console.log(yearsOfRetirement(1991, "jay"));
 console.log(yearsOfRetirement(1970, "key"));
-*/
 //////Coding Challenge #1
 // Dlophins, koalas;
 
@@ -113,3 +112,43 @@ scoreDolphins = calcAverage(85, 54, 41);
 scorekoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scorekoalas);
 checkWinner(scoreDolphins, scorekoalas);
+*/
+////Introduction to Arrays
+
+const friend1 = "john";
+const friend2 = "jay";
+const friend3 = "jojo";
+const friends = ["john", "jay", "jojo"];
+console.log(friends);
+const y = new Array(1991, 1985, 2000, 2890);
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+// you can cheage one name form the array even when using a const
+friends[2] = "joy";
+console.log(friends);
+//but not the whole array
+//friends = ["a", "b", "c"]; this bad
+const firstName = "Josh";
+const josh = [firstName, "king", 2021 - 1998, friends];
+console.log(josh);
+
+//test
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+const years = [1990, 1967, 2002, 2010, 2018];
+//this wont work the argument is expecting a single value
+//years is a array of valus.
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
