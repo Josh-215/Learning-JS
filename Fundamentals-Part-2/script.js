@@ -112,7 +112,6 @@ scoreDolphins = calcAverage(85, 54, 41);
 scorekoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scorekoalas);
 checkWinner(scoreDolphins, scorekoalas);
-*/
 ////Introduction to Arrays
 
 const friend1 = "john";
@@ -152,3 +151,35 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+*/
+/////Basic Array Operations (Methods)////
+
+const friends = ["john", "jay", "jojo"];
+////adds values
+//friends.Puch add a value to the end of an array.
+const newLength = friends.push("jaay");
+console.log(friends);
+console.log(newLength);
+//friends.unshift add a value at the start of a array
+friends.unshift("jaja");
+console.log(friends);
+
+////remove values
+friends.pop(); //last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); //first
+console.log(friends);
+console.log(friends.indexOf("jay"));
+console.log(friends.indexOf("j")); // -1
+
+friends.push(23);
+console.log(friends.includes("jay"));
+console.log(friends.includes("j"));
+console.log(friends.includes(23));
+
+if (friends.includes("jay")) {
+  console.log("you have a friend name jay");
+}
