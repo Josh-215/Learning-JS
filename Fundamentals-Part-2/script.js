@@ -80,7 +80,7 @@ const yearsOfRetirement = function (birthyear, firstName) {
     console.log(`${firstName} retires in ${retirement}`);
     return retirement;
   } else {
-    console.log(`${firstName} has retired`);
+    console.log(`${firstName}   retired`);
     return -1;
   }
 };
@@ -183,7 +183,6 @@ console.log(friends.includes(23));
 if (friends.includes("jay")) {
   console.log("you have a friend name jay");
 }
-*/
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -192,3 +191,35 @@ const bills = [125, 555, 44];
 const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tip[0], +bills[1] + tip[1], +bills[2] + tip[2]];
 console.log(bills, tip, totals);
+*/
+const josh = {
+  firstName: "Josh",
+  lastName: "Urquhart",
+  age: 2021 - 1998,
+  job: "walmart",
+  friends: ["jojo", "john", "jazz"],
+};
+console.log(josh);
+console.log(josh.firstName);
+console.log(josh["lastName"]);
+
+const nameKey = "Name";
+
+console.log(josh["first" + "Name"]);
+console.log(josh["last" + "Name"]);
+
+// const interestedIn = prompt(
+//   "What do you want to know about Josh? Choose between firstName, lastName, age, job, and friends, "
+// );
+// if (josh[interestedIn]) {
+//   console.log(josh[interestedIn]);
+// } else {
+//   console.log(
+//     "wrong request! Choose between firstName, lastName, age, job, and friends, "
+//   );
+// }
+
+josh.location = "philly";
+console.log(`
+${josh.firstName} has ${josh.friends.length} friend, and his best friend is called ${josh.friends[0]}.
+`);
