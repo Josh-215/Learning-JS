@@ -191,7 +191,7 @@ const bills = [125, 555, 44];
 const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tip[0], +bills[1] + tip[1], +bills[2] + tip[2]];
 console.log(bills, tip, totals);
-*/
+/////////Dot vs. Bracket Notation
 const josh = {
   firstName: "Josh",
   lastName: "Urquhart",
@@ -209,17 +209,55 @@ console.log(josh["first" + "Name"]);
 console.log(josh["last" + "Name"]);
 
 // const interestedIn = prompt(
-//   "What do you want to know about Josh? Choose between firstName, lastName, age, job, and friends, "
-// );
-// if (josh[interestedIn]) {
-//   console.log(josh[interestedIn]);
-// } else {
-//   console.log(
-//     "wrong request! Choose between firstName, lastName, age, job, and friends, "
-//   );
-// }
+  //   "What do you want to know about Josh? Choose between firstName, lastName, age, job, and friends, "
+  // );
+  // if (josh[interestedIn]) {
+    //   console.log(josh[interestedIn]);
+    // } else {
+      //   console.log(
+        //     "wrong request! Choose between firstName, lastName, age, job, and friends, "
+        //   );
+        // }
+        
+        josh.location = "philly";
+        console.log(`
+        ${josh.firstName} has ${josh.friends.length} friend, and his best friend is called ${josh.friends[0]}.
+        `);
+        */
+////// Object Methods
+const josh = {
+  firstName: "Josh",
+  lastName: "Urquhart",
+  birthYear: 1998,
+  job: "student",
+  friends: ["jojo", "john", "jazz"],
+  hasDriversLicense: true,
 
-josh.location = "philly";
-console.log(`
-${josh.firstName} has ${josh.friends.length} friend, and his best friend is called ${josh.friends[0]}.
-`);
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+  // calcAge: function () {
+  //   console.log(this);
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+
+  getsummery: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      josh.job
+    } and has ${this.hasDriversLicense ? "a" : "no"} driver license`;
+  },
+};
+
+console.log(josh.calcAge());
+
+console.log(josh.age);
+console.log(josh.age);
+console.log(josh.age);
+// console.log(josh["calcAge"](1991));
+
+console.log(josh.getsummery());
