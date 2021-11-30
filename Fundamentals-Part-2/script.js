@@ -209,55 +209,85 @@ console.log(josh["first" + "Name"]);
 console.log(josh["last" + "Name"]);
 
 // const interestedIn = prompt(
-  //   "What do you want to know about Josh? Choose between firstName, lastName, age, job, and friends, "
-  // );
-  // if (josh[interestedIn]) {
-    //   console.log(josh[interestedIn]);
-    // } else {
-      //   console.log(
-        //     "wrong request! Choose between firstName, lastName, age, job, and friends, "
-        //   );
-        // }
-        
-        josh.location = "philly";
-        console.log(`
-        ${josh.firstName} has ${josh.friends.length} friend, and his best friend is called ${josh.friends[0]}.
-        `);
-        */
-////// Object Methods
-const josh = {
-  firstName: "Josh",
-  lastName: "Urquhart",
-  birthYear: 1998,
-  job: "student",
-  friends: ["jojo", "john", "jazz"],
-  hasDriversLicense: true,
+ //   "What do you want to know about Josh? Choose between firstName, lastName, age, job, and friends, "
+ // );
+ // if (josh[interestedIn]) {
+ //   console.log(josh[interestedIn]);
+ // } else {
+ //   console.log(
+ /     "wrong request! Choose between firstName, lastName, age, job, and friends, "
+ //   );
+ // }
+ 
+ josh.location = "philly";
+ console.log(`
+ ${josh.firstName} has ${josh.friends.length} friend, and his best friend is called ${josh.friends[0]}.
+ `);
+ ////// Object Methods
+ const josh = {
+ firstName: "Josh",
+ lastName: "Urquhart",
+ birthYear: 1998,
+ job: "student",
+ friends: ["jojo", "john", "jazz"],
+ hasDriversLicense: true,
+ 
+ // calcAge: function (birthYear) {
+ //   return 2037 - birthYear;
+ // },
+ // calcAge: function () {
+ //   console.log(this);
+ //   return 2037 - this.birthYear;
+ // },
+ 
+ calcAge: function () {
+   this.age = 2021 - this.birthYear;
+   return this.age;
+ },
+ 
+ getsummery: function () {
+   return `${this.firstName} is a ${this.calcAge()}-year old ${
+     josh.job
+   } and has ${this.hasDriversLicense ? "a" : "no"} driver license`;
+ },
+ };
+ 
+ console.log(josh.calcAge());
+ 
+  // console.log(josh["calcAge"](1991));
+  console.log(josh.getsummery());
+  */
+/////  Coding Challenge #3
+const Mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
 
-  // calcAge: function (birthYear) {
-  //   return 2037 - birthYear;
-  // },
-  // calcAge: function () {
-  //   console.log(this);
-  //   return 2037 - this.birthYear;
-  // },
-
-  calcAge: function () {
-    this.age = 2021 - this.birthYear;
-    return this.age;
-  },
-
-  getsummery: function () {
-    return `${this.firstName} is a ${this.calcAge()}-year old ${
-      josh.job
-    } and has ${this.hasDriversLicense ? "a" : "no"} driver license`;
+  calcBML: function () {
+    this.BML = this.mass / this.height ** 2;
+    return Math.floor(this.BML);
   },
 };
+console.log(Mark.calcBML());
 
-console.log(josh.calcAge());
+const John = {
+  firstName: "john",
+  lastName: "smith",
+  mass: 92,
+  height: 1.95,
 
-console.log(josh.age);
-console.log(josh.age);
-console.log(josh.age);
-// console.log(josh["calcAge"](1991));
+  calcBML: function () {
+    this.BML = this.mass / this.height ** 2;
+    return Math.floor(this.BML);
+  },
+};
+console.log(John.calcBML());
 
-console.log(josh.getsummery());
+console.log(
+  `${
+    Mark.firstName + " " + Mark.lastName
+  } BML (${Mark.calcBML()}) is higher then ${
+    John.firstName + " " + John.lastName
+  } (${John.calcBML()})!`
+);
