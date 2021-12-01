@@ -256,38 +256,88 @@ console.log(josh["last" + "Name"]);
  
   // console.log(josh["calcAge"](1991));
   console.log(josh.getsummery());
-  */
-/////  Coding Challenge #3
-const Mark = {
-  firstName: "Mark",
-  lastName: "Miller",
-  mass: 78,
-  height: 1.69,
+  /////  Coding Challenge #3
+  const Mark = {
+    firstName: "Mark",
+    lastName: "Miller",
+    mass: 78,
+    height: 1.69,
+    
+    calcBML: function () {
+      this.BML = this.mass / this.height ** 2;
+      return Math.floor(this.BML);
+    },
+  };
+  console.log(Mark.calcBML());
+  
+  const John = {
+    firstName: "john",
+    lastName: "smith",
+    mass: 92,
+    height: 1.95,
+    
+    calcBML: function () {
+      this.BML = this.mass / this.height ** 2;
+      return Math.floor(this.BML);
+    },
+  };
+  console.log(John.calcBML());
+  
+  console.log(
+    `${
+      Mark.firstName + " " + Mark.lastName
+    } BML (${Mark.calcBML()}) is higher then ${
+      John.firstName + " " + John.lastName
+    } (${John.calcBML()})!`
+    );
+    ///////
+*/
+// console.log("lifting weights repetiton 1");
+// console.log("lifting weights repetiton 2");
+// console.log("lifting weights repetiton 3");
+// console.log("lifting weights repetiton 4");
+// console.log("lifting weights repetiton 5");
+// console.log("lifting weights repetiton 6");
+// console.log("lifting weights repetiton 7");
+// console.log("lifting weights repetiton 8");
+// console.log("lifting weights repetiton 9");
+// console.log("lifting weights repetiton 10");
 
-  calcBML: function () {
-    this.BML = this.mass / this.height ** 2;
-    return Math.floor(this.BML);
-  },
-};
-console.log(Mark.calcBML());
+// for loops keep runing while condition is true
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`lifting weights repetiton ${rep}`);
+}
+const Josh = ["Josh", "good", 2037 - 1991, ["jojo", "john", "jazz"], true];
 
-const John = {
-  firstName: "john",
-  lastName: "smith",
-  mass: 92,
-  height: 1.95,
+const type = [];
+// console.log(Josh[0])
+// console.log(Josh[1])
+////and so on
 
-  calcBML: function () {
-    this.BML = this.mass / this.height ** 2;
-    return Math.floor(this.BML);
-  },
-};
-console.log(John.calcBML());
+for (let i = 0; i < Josh.length; i++) {
+  //reading from the Josh Array
+  console.log(Josh[i], typeof Josh[i]);
+  // filling types Array
+  // type[i] = typeof Josh[i];
+  // type.push(typeof Josh[i]);
+}
+console.log(type);
 
-console.log(
-  `${
-    Mark.firstName + " " + Mark.lastName
-  } BML (${Mark.calcBML()}) is higher then ${
-    John.firstName + " " + John.lastName
-  } (${John.calcBML()})!`
-);
+const year = [1991, 2007, 1969, 2020];
+const age = [];
+
+// for (let i = 0; i < year.length; i++) {
+//   age.push(2037 - year[i]);
+// }
+// console.log(age);
+//continue and break
+console.log("---Only STRING---");
+for (let i = 0; i < Josh.length; i++) {
+  if (typeof Josh[i] !== "string") continue;
+  console.log(Josh[i], typeof Josh[i]);
+}
+console.log("---BREAK WITH NUMBER");
+for (let i = 0; i < Josh.length; i++) {
+  if (typeof Josh[i] === "number") break;
+  console.log(Josh[i], typeof Josh[i]);
+}
