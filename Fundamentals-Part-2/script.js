@@ -284,16 +284,17 @@ console.log(josh["last" + "Name"]);
   console.log(John.calcBML());
   
   console.log(
-    `${
-      Mark.firstName + " " + Mark.lastName
-    } BML (${Mark.calcBML()}) is higher then ${
-      John.firstName + " " + John.lastName
-    } (${John.calcBML()})!`
-    );
-    ///////
-*/
-// console.log("lifting weights repetiton 1");
-// console.log("lifting weights repetiton 2");
+ `${
+   Mark.firstName + " " + Mark.lastName
+ } BML (${Mark.calcBML()}) is higher then ${
+   John.firstName + " " + John.lastName
+ } (${John.calcBML()})!`
+ );
+ ///////
+ // console.log("lifting weights repetiton 1");
+ // console.log("lifting weights repetiton 2");
+
+\\\\\Looping Arrays, Breaking and Continuing
 // console.log("lifting weights repetiton 3");
 // console.log("lifting weights repetiton 4");
 // console.log("lifting weights repetiton 5");
@@ -340,4 +341,18 @@ console.log("---BREAK WITH NUMBER");
 for (let i = 0; i < Josh.length; i++) {
   if (typeof Josh[i] === "number") break;
   console.log(Josh[i], typeof Josh[i]);
+}
+*/
+///// Looping Backwards and Loops in Loops
+
+const Josh = ["Josh", "good", 2037 - 1991, ["jojo", "john", "jazz"]];
+for (let i = Josh.length - 1; i >= 0; i--) {
+  console.log(i, Josh[i]);
+}
+
+for (let exercise = 1; exercise <= 4; exercise++) {
+  console.log(`----Starting exercise${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`--lifting weight repetition ${rep} `);
+  }
 }
