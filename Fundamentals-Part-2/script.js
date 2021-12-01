@@ -342,7 +342,7 @@ for (let i = 0; i < Josh.length; i++) {
   if (typeof Josh[i] === "number") break;
   console.log(Josh[i], typeof Josh[i]);
 }
-*/
+
 ///// Looping Backwards and Loops in Loops
 
 const Josh = ["Josh", "good", 2037 - 1991, ["jojo", "john", "jazz"]];
@@ -354,5 +354,25 @@ for (let exercise = 1; exercise <= 4; exercise++) {
   console.log(`----Starting exercise${exercise}`);
   for (let rep = 1; rep < 6; rep++) {
     console.log(`--lifting weight repetition ${rep} `);
+  }
+}
+*/
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`--lifting weight repetition ${rep}`);
+// }
+// whille loops
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`--lifting weight repetition ${rep}`);
+//   rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log("loop has ended...");
   }
 }
