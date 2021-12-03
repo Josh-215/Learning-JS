@@ -356,7 +356,7 @@ for (let exercise = 1; exercise <= 4; exercise++) {
     console.log(`--lifting weight repetition ${rep} `);
   }
 }
-*/
+
 // for (let rep = 1; rep <= 10; rep++) {
 //   console.log(`--lifting weight repetition ${rep}`);
 // }
@@ -376,3 +376,4 @@ while (dice !== 6) {
     console.log("loop has ended...");
   }
 }
+*/
