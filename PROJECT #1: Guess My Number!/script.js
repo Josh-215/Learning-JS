@@ -11,8 +11,8 @@ console.log(document.querySelector(".score").textContent);
 console.log(document.querySelector(".number").textContent);
 //for the element 'input'you ues .value instead of .textContent to get the value
 console.log(document.querySelector(".guess").value);
-*/
 /////
+*/
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
