@@ -3,7 +3,20 @@ const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnsOpenModal = document.querySelectorAll(".show-modal");
-console.log(btnsOpenModal);
+//open and close model
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+const openModel = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
 
 for (let i = 0; i < btnsOpenModal.length; i++)
-  console.log(btnsOpenModal[i].textContent);
+  btnsOpenModal[i].addEventListener("click", openModel);
+
+//No need to add the () at the and of closeModal it will
+// execute on click.
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
