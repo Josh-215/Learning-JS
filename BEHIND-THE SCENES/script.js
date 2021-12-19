@@ -37,36 +37,77 @@
 // ///////
 
 // console.log(josh.calcAge());
-console.log(this);
+// console.log(this);
 
-const calcAge = function (birthYear) {
-  console.log(2021 - birthYear);
-  console.log(this);
-};
-calcAge(1998);
+// const calcAge = function (birthYear) {
+//   console.log(2021 - birthYear);
+//   console.log(this);
+// };
+// calcAge(1998);
 
-// the THIS dose not work in an arrow function
-const calcAgeArrow = (birthYear) => {
-  console.log(2027 - birthYear);
-  console.log(this);
-};
-calcAgeArrow(1998);
+// // the THIS dose not work in an arrow function
+// const calcAgeArrow = (birthYear) => {
+//   console.log(2027 - birthYear);
+//   console.log(this);
+// };
+// calcAgeArrow(1998);
 
+// const josh = {
+//   year: 1998,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2021 - this.year);
+//   },
+// };
+// josh.calcAge();
+
+// const jay = {
+//   year: 1997,
+// };
+
+// jay.calcAge = josh.calcAge;
+// jay.calcAge();
+
+// const f = josh.calcAge;
+// f();
+/////////
+// Regular Functions vs. Arrow Functions
 const josh = {
+  fristName: "Josh",
   year: 1998,
   calcAge: function () {
-    console.log(this);
     console.log(2021 - this.year);
+    //Solution one
+    // const self = this;
+    // const ismillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // console.log(this.year >= 1981 && this.year <= 1996);
+    //};
+    //Solution two
+
+    const ismillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+      // console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    ismillenial();
   },
+  great: () => console.log(`hey ${this.fristName}`),
 };
+josh.great();
 josh.calcAge();
 
-const jay = {
-  year: 1997,
+//argument keyWords
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
 };
+addExpr(2, 4);
 
-jay.calcAge = josh.calcAge;
-jay.calcAge();
-
-const f = josh.calcAge;
-f();
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 4, 6);
