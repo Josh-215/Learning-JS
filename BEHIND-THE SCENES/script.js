@@ -72,42 +72,57 @@
 // f();
 /////////
 // Regular Functions vs. Arrow Functions
-const josh = {
-  fristName: "Josh",
-  year: 1998,
-  calcAge: function () {
-    console.log(2021 - this.year);
-    //Solution one
-    // const self = this;
-    // const ismillenial = function () {
-    //   console.log(self);
-    //   console.log(self.year >= 1981 && self.year <= 1996);
-    // console.log(this.year >= 1981 && this.year <= 1996);
-    //};
-    //Solution two
+// const josh = {
+//   fristName: "Josh",
+//   year: 1998,
+//   calcAge: function () {
+//     console.log(2021 - this.year);
+//     //Solution one
+//     // const self = this;
+//     // const ismillenial = function () {
+//     //   console.log(self);
+//     //   console.log(self.year >= 1981 && self.year <= 1996);
+//     // console.log(this.year >= 1981 && this.year <= 1996);
+//     //};
+//     //Solution two
 
-    const ismillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-      // console.log(this.year >= 1981 && this.year <= 1996);
-    };
+//     const ismillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//       // console.log(this.year >= 1981 && this.year <= 1996);
+//     };
 
-    ismillenial();
-  },
-  great: () => console.log(`hey ${this.fristName}`),
+//     ismillenial();
+//   },
+//   great: () => console.log(`hey ${this.fristName}`),
+// };
+// josh.great();
+// josh.calcAge();
+
+// //argument keyWords
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addExpr(2, 4);
+
+// var addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addArrow(2, 4, 6);
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: "Josh",
+  age: 30,
 };
-josh.great();
-josh.calcAge();
 
-//argument keyWords
-const addExpr = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
-addExpr(2, 4);
-
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
-addArrow(2, 4, 6);
+const friend = me;
+friend.age = 27;
+console.log("friend", me);
+console.log("me", me);
