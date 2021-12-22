@@ -40,36 +40,52 @@ const restaurant = {
     );
   },
 };
-restaurant.orderDelivery({
-  tim: "20:30",
-  adderss: "via del Sole, 21",
-  mainIndex: 2,
-  startIndex: 2,
-});
-restaurant.orderDelivery({
-  adderss: "via del Sole, 21",
-  startIndex: 1,
-});
+const arr = [4, 5, 6];
+// the bad way of doing this
+const badNewArr = [1, 2, 3, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+// The Spread Operator (...)good way
+const newArr = [1, 2, 3, ...arr];
+console.log(newArr);
+const newMenu = [...restaurant.mainMenu, "cookeis"];
+console.log(newMenu);
+//create copys
+const mainMenu = [...restaurant.mainMenu];
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+//join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+///////
+// restaurant.orderDelivery({
+//   tim: "20:30",
+//   adderss: "via del Sole, 21",
+//   mainIndex: 2,
+//   startIndex: 2,
+// });
+// restaurant.orderDelivery({
+//   adderss: "via del Sole, 21",
+//   startIndex: 1,
+// });
 
-const { name: restaurantName, openingHours: tags } = restaurant;
-//default values
-const { menu = [], starterMenu: starter = [] } = restaurant;
-console.log(menu, starter);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
+// const { name: restaurantName, openingHours: tags } = restaurant;
+// //default values
+// const { menu = [], starterMenu: starter = [] } = restaurant;
+// console.log(menu, starter);
 
-({ a, b } = obj);
-console.log(a, b);
-/// Nested object
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(open, close);
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
+
+// ({ a, b } = obj);
+// console.log(a, b);
+// /// Nested object
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(open, close);
 
 /////////////
 // const arr = [2, 3, 4];
